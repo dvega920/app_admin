@@ -31,10 +31,8 @@ export class TripDataService {
       .catch(this.handleError);
   }
 
-  public addTrip(formData: Trip): Promise<Trip> {
-
+  public addTrip(formData: string): Promise<Trip> {
     console.log("Inside TripDataService#addTrip");
-
     return this.http
       .post(this.tripUrl, formData)
       .toPromise()
